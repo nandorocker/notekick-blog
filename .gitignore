@@ -1,7 +1,8 @@
-# Created by http://gitignore.io
+### Filesystem ###
+.htaccess
+*.dump
 
 ### WordPress ###
-.htaccess
 wp-config.php
 wp-content/uploads/
 wp-content/blogs.dir/
