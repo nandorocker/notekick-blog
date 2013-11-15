@@ -13,25 +13,20 @@
  *
  * @package WordPress
  */
+define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] );
 
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
-define('DB_NAME', 'wordpress');
-
-/** MySQL database username */
-define('DB_USER', 'root');
-
-/** MySQL database password */
-define('DB_PASSWORD', '');
-
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
-
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
-
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+if (isset($_SERVER["DATABASE_URL"])) {
+ $db = parse_url($_SERVER["DATABASE_URL"]);
+ define("DB_NAME", trim($db["path"],"/"));
+ define("DB_USER", $db["user"]);
+ define("DB_PASSWORD", $db["pass"]);
+ define("DB_HOST", $db["host"]);
+}
+else {
+ die("Your heroku DATABASE_URL does not appear to be correctly specified.");
+}
 
 /**#@+
  * Authentication Unique Keys and Salts.
