@@ -136,8 +136,8 @@ input,
 select,
 textarea {
 	color: #000;
-	font-family: Georgia, Times, "Times New Roman", serif;
-	font-size: 23px;
+	font-family: "Open Sans", sans-serif;
+	font-size: 19px;
 	line-height: 1.4782608695;
 }
 
@@ -845,7 +845,7 @@ body {
 	vertical-align: middle;
 }
 .entry-title {
-	font: 300 54px/1 "Open Sans", sans-serif;
+	font: 300 50px/1 "Open Sans", sans-serif;
 	margin: 0;
 	max-width: 696px;
 }
@@ -1506,7 +1506,7 @@ li #respond {
 }
 .comment-status {
 	color: #808080;
-	font: italic 13px/1.3076923076 Georgia, Times, "Times New Roman", serif;
+	font: italic 13px/1.3076923076 "Open Sans", sans-serif;
 	margin: 0 auto 34px;
 	max-width: 696px;
 }
