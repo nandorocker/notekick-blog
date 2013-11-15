@@ -1,4 +1,9 @@
 /*
+Importing fonts
+*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700);
+
+/*
 Theme Name: Ryu
 Theme URI: http://theme.wordpress.com/themes/ryu/
 Author: Automattic
@@ -151,8 +156,8 @@ textarea {
 /* Headings */
 h1,h2,h3,h4,h5,h6 {
 	clear: both;
-	font-family: "Playfair Display", serif;
-	font-weight: 700;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 300;
 	margin-bottom: 17px;
 }
 h1 {
@@ -225,7 +230,7 @@ blockquote em, blockquote i, blockquote cite {
 	font-style: normal;
 }
 blockquote p {
-	font-family: "Playfair Display", serif;
+	font-family: 'Open Sans', sans-serif;
 	font-size: 38px;
 	line-height: 1.3421052631;
 	margin-bottom: 51px;
@@ -682,7 +687,7 @@ body {
 	text-decoration: none;
 }
 .site-description {
-	font: italic 400 14px/2.4285714285 "Playfair Display", serif;
+	font: 400 14px/2.4285714285 "Open Sans", sans-serif;
 	margin: 0;
 	text-align: center;
 }
@@ -840,7 +845,7 @@ body {
 	vertical-align: middle;
 }
 .entry-title {
-	font: italic 700 68px/1 "Playfair Display", serif;
+	font: 300 54px/1 "Open Sans", sans-serif;
 	margin: 0;
 	max-width: 696px;
 }
@@ -885,7 +890,7 @@ body {
 	padding: 102px 0 68px;
 }
 .page-title {
-	font: italic 700 34px/1 "Playfair Display", serif;
+	font: 700 34px/1 "Open Sans", sans-serif;
 	margin-bottom: 34px;
 	text-align: center;
 }
@@ -1336,7 +1341,7 @@ span > object {
 	padding: 102px 0;
 }
 .comments-title {
-	font: italic 700 34px/1 "Playfair Display", serif;
+	font: 700 34px/1 "Open Sans", sans-serif;
 	margin-bottom: 68px;
 	text-align: center;
 }
@@ -1458,7 +1463,7 @@ li #respond {
 	padding: 34px 0;
 }
 .comments-area #respond h3 {
-	font: italic 700 34px/1 "Playfair Display", serif;
+	font: italic 700 34px/1 "Open Sans", sans-serif;
 	margin: 0 0 34px;
 	text-align: center;
 }
@@ -1512,7 +1517,7 @@ li #respond {
 
 .site-info {
 	color: #808080;
-	font-family: "Playfair Display", serif;
+	font-family: "Open Sans", sans-serif;
 	font-size: 14px;
 	font-style: italic;
 	line-height: 1.2142857142;
