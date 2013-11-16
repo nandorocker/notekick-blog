@@ -15,26 +15,18 @@
  */
 // ** MySQL settings - You can get this info from your web host ** //
 // ** Universal version – trying to have one file local and server ** //
-if ($_SERVER['SERVER_PORT'] != 80) {
-	$local_port = ':' . $_SERVER['SERVER_PORT'];
-}
-
-define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] . $local_port);
-
-if ($_SERVER['SERVER_NAME'] != 'localhost' && isset($_SERVER["DATABASE_URL"])) {
+if ($_SERVER["BLOG_ENV"] == "deploy") {
 	$db = parse_url($_SERVER["DATABASE_URL"]);
 	define("DB_NAME", trim($db["path"],"/"));
 	define("DB_USER", $db["user"]);
 	define("DB_PASSWORD", $db["pass"]);
 	define("DB_HOST", $db["host"]);
 }
-else {
-	$db = parse_url($_SERVER["DATABASE_URL"]);
+else if ($_SERVER["BLOG_ENV"] == "production") {
 	define('DB_NAME', 'wordpress');
 	define('DB_USER', 'root');
 	define('DB_PASSWORD', '');
 	define('DB_HOST', 'localhost');
-	//die("Your heroku DATABASE_URL does not appear to be correctly specified.");
 }
 
 /**#@+
