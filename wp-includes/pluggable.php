@@ -410,8 +410,8 @@ function wp_mail( $to, $subject, $message, $headers = '', $attachments = array()
 	$phpmailer->Port = 587; //25; // set the SMTP server port
 
 	$phpmailer->Host = 'smtp.mandrillapp.com'; // SMTP server
-	$phpmailer->Username = $_ENV["hello@nandorocker.com"]; // SMTP server username
-	$phpmailer->Password = $_ENV["boIpGYRgNIXZ9VB04Vrh9w"]; // SMTP server password
+	$phpmailer->Username = $_ENV["MANDRILL_USERNAME"]; // SMTP server username
+	$phpmailer->Password = $_ENV["MANDRILL_API_KEY"]; // SMTP server password
 
 	$phpmailer->From = $bloginfo = get_bloginfo( 'admin_email', 'raw' );
 	$phpmailer->FromName = $bloginfo = get_bloginfo( 'name', 'raw' );
